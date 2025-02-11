@@ -88,7 +88,7 @@ public class CardManager : MonoBehaviour
 				//Generate Player card
 				cardDrawingTimer = 0;
 
-				card = Instantiate(cardPrefab);
+				card = Instantiate(cardPrefab); //creates a card
 				RectTransform cardTrans = card.GetComponent<RectTransform>();
 				cardTrans.SetParent(cardGroup);
 				//Start point
