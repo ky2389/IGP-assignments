@@ -37,4 +37,10 @@ public class Enemy : MonoBehaviour
         Debug.Log(enemyName + " defeated!");
         Destroy(gameObject);
     }
+
+    public void Init(EnemyManager enemyManager)
+    {
+        //set the position of enemy
+        RectTransform enemyTrans = GetComponent<RectTransform>();
+    }
 }
