@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4504735700296904}
   - component: {fileID: 95330074702110004}
+  - component: {fileID: 98266719490845554}
   m_Layer: 0
   m_Name: MainBody
   m_TagString: Untagged
@@ -52,7 +53,7 @@ Animator:
   m_GameObject: {fileID: 1082579215211302}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d3c0b440a9f7e6e42aa6b23c0be01a87, type: 2}
+  m_Controller: {fileID: 9100000, guid: 443cde6c4cadc1a4090c864e5ca0413b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -64,6 +65,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &98266719490845554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082579215211302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0330b96306597645bc6bcadfa67f9e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1204621766096810
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,6 +925,7 @@ GameObject:
   - component: {fileID: 195251518580205288}
   - component: {fileID: 65883593450060470}
   - component: {fileID: 54081652428416772}
+  - component: {fileID: 462724371862194401}
   m_Layer: 0
   m_Name: Cosplayer
   m_TagString: Cosplayer
@@ -1007,6 +1021,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &462724371862194401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756437944430256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 905ee0ee51d6f6e49831df1823e5803f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayGroup: {fileID: 6390561329803677587}
+  hungrybar: {fileID: 7705366228534024064}
+  mainBody: {fileID: 4504735700296904}
+  anim: {fileID: 95330074702110004}
+  hungrySpeed: 35
 --- !u!1 &1856279425192162
 GameObject:
   m_ObjectHideFlags: 0
@@ -1190,6 +1221,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6390561329803677587}
+  - component: {fileID: 2403082373900938031}
   m_Layer: 0
   m_Name: DisplayGroup
   m_TagString: Untagged
@@ -1214,6 +1246,18 @@ Transform:
   - {fileID: 7705366228534024064}
   m_Father: {fileID: 4609632631654026}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2403082373900938031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574348231283966836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd5952df277f0f44bd598040e062003, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4637120238969669828
 GameObject:
   m_ObjectHideFlags: 0
