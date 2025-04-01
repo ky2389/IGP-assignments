@@ -31,7 +31,7 @@ public class InteractableObject : MonoBehaviour
         
         if (canPickup)
         {
-            InteractionManager InteractionManager = Object.FindFirstObjectByType<InteractionManager>();
+            InteractionManager InteractionManager = FindFirstObjectByType<InteractionManager>();
             if (InteractionManager != null)
             {
                 InteractionManager.AddItemToInventory(itemID, itemSprite);

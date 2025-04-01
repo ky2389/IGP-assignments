@@ -98,11 +98,11 @@ public class ViewManager : MonoBehaviour
                             arrowButton.SetDirection(Vector3.right);
                             break;
                         case ArrowPosition.Up:
-                            arrowPos = new Vector2(screenSize.x / 2-200, screenSize.y - 50);
+                            arrowPos = new Vector2(screenSize.x / 2-200, screenSize.y - 60);
                             arrowButton.SetDirection(Vector3.up);
                             break;
                         case ArrowPosition.Down:
-                            arrowPos = new Vector2(screenSize.x / 2-200, 50);
+                            arrowPos = new Vector2(screenSize.x / 2-200, 60);
                             arrowButton.SetDirection(Vector3.down);
                             break;
                     }

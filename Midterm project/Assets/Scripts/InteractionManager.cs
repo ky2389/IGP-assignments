@@ -32,7 +32,7 @@ public class InteractionManager : MonoBehaviour
             cursorNormal.rectTransform.position = cursorPos;
         if (cursorHover != null)
             cursorHover.rectTransform.position = cursorPos;
-            
+        
         // Check for interactable UI elements
         if (EventSystem.current.IsPointerOverGameObject())
         {
@@ -47,7 +47,14 @@ public class InteractionManager : MonoBehaviour
             {
                 InteractableObject interactable = result.gameObject.GetComponent<InteractableObject>();
                 InventoryItem inventoryItem = result.gameObject.GetComponent<InventoryItem>();
-                if (interactable != null||inventoryItem!=null)
+                if(inventoryItem != null)
+                {
+                    //show hover cursor
+                    if(cursorNormal != null) cursorNormal.gameObject.SetActive(false);
+                    if(cursorHover != null) cursorHover.gameObject.SetActive(true);
+                    foundInteractable = true;
+                }
+                if (interactable != null)
                 {
                     // Show hover cursor
                     if (cursorNormal != null) cursorNormal.gameObject.SetActive(false);
@@ -70,8 +77,11 @@ public class InteractionManager : MonoBehaviour
                             bool used = interactable.UseItemOn(selectedItem.itemID);
                             if (used)
                             {
-                                RemoveItemFromInventory(selectedItem);
-                                selectedItem = null;
+                                if(selectedItem.itemID!="matches")
+                                {
+                                    RemoveItemFromInventory(selectedItem);
+                                    selectedItem = null;
+                                }
                             }
                         }
                     }
