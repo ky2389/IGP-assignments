@@ -30,6 +30,6 @@ public class ArrowButton : MonoBehaviour
     public void OnClick()
     {
         if (viewManager != null)
-            viewManager.SwitchToView(targetView);
+            viewManager.ChangeView(targetView);
     }
 }
