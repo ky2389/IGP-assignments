@@ -5,7 +5,9 @@ using UnityEngine;
 public class JSONLoader : MonoBehaviour
 {
     [SerializeField]
-    string url="https://pokeapi.co/api/v2/pokemon/1/";
+    string url="https://pokeapi.co/api/v2/pokemon/";
+    [SerializeField]
+    int pokemonID=1;
     public delegate void JSONRefreshed(JSONNode json);
     public JSONRefreshed jsonRefreshed;
     public JSONNode currentJSON;
@@ -26,7 +28,8 @@ public class JSONLoader : MonoBehaviour
     }
     IEnumerator RefreshJSON()
     {
-        WWW www=new WWW(url);
+        string urlFinal=url+pokemonID+"/";
+        WWW www=new WWW(urlFinal);
         yield return www;
         if(www.error == null)
         {
