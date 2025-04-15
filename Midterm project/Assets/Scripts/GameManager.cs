@@ -19,7 +19,14 @@ public class GameManager : MonoBehaviour
     
     public void LoadScene(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        if (sceneName == "Settings")
+        {
+            SceneManager.LoadScene(sceneName,LoadSceneMode.Additive);
+            return;
+        }
+        else{
+            SceneManager.LoadScene(sceneName);
+        }
     }
     void Update()
     {
