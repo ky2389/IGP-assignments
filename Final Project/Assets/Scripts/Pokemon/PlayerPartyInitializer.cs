@@ -1,0 +1,61 @@
+using UnityEngine;
+
+public class PlayerPartyInitializer : MonoBehaviour
+{
+    [SerializeField] private PokemonParty playerParty;
+    [SerializeField] private int initialPokemonId = 1; // Default to Bulbasaur
+
+    private void Awake()
+    {
+        // Ensure playerParty is assigned
+        if (playerParty == null)
+        {
+            playerParty = GetComponent<PokemonParty>();
+            if (playerParty == null)
+            {
+                Debug.LogError("PokemonParty component not found!");
+            }
+        }
+    }
+
+    private void Start()
+    {
+        // If no custom Pokemon is set, use the default one
+        if (playerParty.Pokemons.Count == 0)
+        {
+            InitializeDefaultPokemon();
+        }
+    }
+
+    private async void InitializeDefaultPokemon()
+    {
+        PokemonBase pokemonBase = await PokemonDatabase.Instance.GetPokemon(initialPokemonId);
+        if (pokemonBase != null)
+        {
+            Pokemon pokemon = new Pokemon(pokemonBase, 5); // Start at level 5
+            playerParty.AddPokemon(pokemon);
+            Debug.Log($"Added default Pokemon {pokemon.Base.Name} to party");
+        }
+        else
+        {
+            Debug.LogError("Failed to load default Pokemon!");
+        }
+    }
+
+    public void SetInitialPokemon(PokemonBase customPokemon)
+    {
+        if (customPokemon == null)
+        {
+            Debug.LogError("Custom Pokemon is null!");
+            return;
+        }
+
+        // Clear existing Pokemon
+        playerParty.Pokemons.Clear();
+        
+        // Add the custom Pokemon
+        Pokemon pokemon = new Pokemon(customPokemon, 5); // Start at level 5
+        playerParty.AddPokemon(pokemon);
+        Debug.Log($"Added custom Pokemon {pokemon.Base.Name} to party");
+    }
+} 
