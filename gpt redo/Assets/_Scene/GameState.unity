@@ -648,6 +648,8 @@ MonoBehaviour:
   iF_Playertalk: {fileID: 1810017650}
   tX_AIReply: {fileID: 260093322}
   npc: {fileID: 1082057503}
+  gameSettings: {fileID: 11400000, guid: 3f2d5403218d0dc47bdd516557197507, type: 2}
+  npcName: Coco
 --- !u!1 &386834942
 GameObject:
   m_ObjectHideFlags: 0
