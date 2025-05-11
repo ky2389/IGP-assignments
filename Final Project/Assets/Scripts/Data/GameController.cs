@@ -41,13 +41,32 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void StartBattle()
+    public async void StartBattle()
     {
         state = GameState.Battle;
         battleSystem.gameObject.SetActive(true);
 
         var playerParty = FindFirstObjectByType<PokemonParty>();
-        var wildPokemon = FindFirstObjectByType<MapArea>().GetComponent<MapArea>().GetRandomWildPokemon();
+        if (playerParty == null)
+        {
+            Debug.LogError("No PokemonParty found in scene!");
+            return;
+        }
+
+        var mapArea = FindFirstObjectByType<MapArea>();
+        if (mapArea == null)
+        {
+            Debug.LogError("No MapArea found in scene!");
+            return;
+        }
+
+        var wildPokemon = await mapArea.GetComponent<MapArea>().GetRandomWildPokemon();
+        if (wildPokemon == null)
+        {
+            Debug.LogError("Failed to get wild Pokemon!");
+            return;
+        }
+
         var wildPokemonCopy = new Pokemon(wildPokemon.Base, wildPokemon.Level);
 
         BattleMusic.Play();

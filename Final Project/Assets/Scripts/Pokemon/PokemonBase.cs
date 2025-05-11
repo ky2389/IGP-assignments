@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Pokemon", menuName = "Pokemon/Create new pokemon")]
 public class PokemonBase : ScriptableObject
 {
-    [SerializeField] string name;
+    [SerializeField] private string pokemonName;
     
     [TextArea]
     [SerializeField] string description;
@@ -48,7 +48,8 @@ public class PokemonBase : ScriptableObject
     }
 
     public string Name {
-        get { return name; }
+        get { return pokemonName; }
+        set { pokemonName = value; }
     }
 
     public string Description {
@@ -57,52 +58,73 @@ public class PokemonBase : ScriptableObject
 
     public Sprite FrontSprite {
         get { return frontSprite; }
+        set { frontSprite = value; }
     }
 
     public Sprite BackSprite {
         get { return backSprite; }
+        set { backSprite = value; }
     }
 
     public PokemonType Type1 {
         get { return type1; }
+        set { type1 = value; }
     }
 
     public PokemonType Type2 {
         get { return type2; }
+        set { type2 = value; }
     }
 
     public int MaxHp {
         get { return maxHp; }
+        set { maxHp = value; }
     }
 
     public int Attack {
         get { return attack; }
+        set { attack = value; }
     }
 
     public int SpAttack {
         get { return spAttack; }
+        set { spAttack = value; }
     }
 
     public int Defense {
         get { return defense; }
+        set { defense = value; }
     }
 
     public int SpDefense {
         get { return spDefense; }
+        set { spDefense = value; }
     }
 
     public int Speed {
         get { return speed; }
+        set { speed = value; }
     }
 
     public List<LearnableMove> LearnableMoves {
         get { return learnableMoves; }
+        set { learnableMoves = value; }
     }
 
-    public int CatchRate => catchRate;
+    public int CatchRate {
+        get { return catchRate; }
+        set { catchRate = value; }
+    }
 
-    public int ExpYield => expYield;
-    public GrowthRate GrowthRate => growthRate;
+    public int ExpYield {
+        get { return expYield; }
+        set { expYield = value; }
+    }
+
+    public GrowthRate GrowthRate {
+        get { return growthRate; }
+        set { growthRate = value; }
+    }
 }
 
 [System.Serializable]
@@ -113,10 +135,12 @@ public class LearnableMove
 
     public MoveBase Base {
         get { return moveBase; }
+        set { moveBase = value; }
     }
 
     public int Level {
         get { return level; }
+        set { level = value; }
     }
 }
 

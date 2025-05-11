@@ -24,50 +24,62 @@ public class MoveBase : ScriptableObject
 
     public string Name {
         get { return name; }
+        set { name = value; }
     }
 
     public string Description {
         get { return description; }
+        set { description = value; }
     }
 
     public PokemonType Type {
         get { return type; }
+        set { type = value; }
     }
 
     public int Power {
         get { return power; }
+        set { power = value; }
     }
 
     public int Accuracy {
         get { return accuracy; }
+        set { accuracy = value; }
     }
 
     public bool AlwaysHits {
         get { return alwaysHits; }
+        set { alwaysHits = value; }
     }
 
     public int PP {
         get { return pp; }
+        set { pp = value; }
     }
 
     public int Priority {
         get { return priority; }
+        set { priority = value; }
     }
 
     public MoveCategory Category {
         get { return category; }
+        set { category = value; }
     }
 
     public MoveEffects Effects {
         get { return effects; }
+        set { effects = value; }
     }
 
     public List<SecondaryEffects> Secondaries {
         get { return secondaries; }
+        set { secondaries = value; }
     }
 
     public MoveTarget Target {
         get { return target; }
+        set { target = value; }
     }
 }
 

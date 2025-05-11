@@ -887,6 +887,53 @@ RectTransform:
   m_AnchoredPosition: {x: -0.0000039935, y: -35}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &663611607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 663611609}
+  - component: {fileID: 663611608}
+  m_Layer: 0
+  m_Name: WildPokemonInit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &663611608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663611607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ced4eb79e2728d146a3e8ba8921eb9e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possiblePokemonIds: 08000000
+  encounterRates:
+  - 1
+--- !u!4 &663611609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663611607}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 845.31274, y: 427.45465, z: -5.404887}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &664902908
 GameObject:
   m_ObjectHideFlags: 0
@@ -1558,8 +1605,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   starterPokemon:
-  - {fileID: 11400000, guid: b8ea5c1e830fe1e45b82802f406db517, type: 2}
-  starterLevels: 01000000
+  - {fileID: 11400000, guid: 61c5d08fa93413e4ba34f73c8da64c47, type: 2}
+  starterLevels: 05000000
 --- !u!114 &795548242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1572,7 +1619,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9266e2adfa531584a9f99e8b18758635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pokemons: []
+  pokemons:
+  - _base: {fileID: 11400000, guid: 61c5d08fa93413e4ba34f73c8da64c47, type: 2}
+    level: 5
 --- !u!4 &795548243
 Transform:
   m_ObjectHideFlags: 0
@@ -1946,7 +1995,6 @@ GameObject:
   m_Component:
   - component: {fileID: 968187401}
   - component: {fileID: 968187402}
-  - component: {fileID: 968187404}
   m_Layer: 0
   m_Name: Battle System
   m_TagString: Untagged
@@ -1987,33 +2035,9 @@ MonoBehaviour:
   enemyUnit: {fileID: 1194789092}
   dialogBox: {fileID: 1745430160}
   partyScreen: {fileID: 1230178123}
-  playerImage: {fileID: 0}
-  trainerImage: {fileID: 0}
   pokeballSprite: {fileID: 8621963922592906532, guid: 787cee3748de1f74fa3c43b73c1b2082,
     type: 3}
-  moveSelectionUI: {fileID: 0}
   name: Brendan
-  pokeballthrown: {fileID: 8300000, guid: c240c5d300d23604fae7654bb87b5b82, type: 3}
-  Pokeballthrown: {fileID: 0}
-  select: {fileID: 8300000, guid: 756ea322d1242424d88669f3bcb0fcb9, type: 3}
-  Select: {fileID: 0}
---- !u!114 &968187404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 968187400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ced4eb79e2728d146a3e8ba8921eb9e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wildPokemons:
-  - _base: {fileID: 11400000, guid: 622405c6224d4cd4cb50f86b02e43177, type: 2}
-    level: 5
-  - _base: {fileID: 11400000, guid: b8ea5c1e830fe1e45b82802f406db517, type: 2}
-    level: 7
 --- !u!1 &978949815
 GameObject:
   m_ObjectHideFlags: 0
@@ -2761,6 +2785,51 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34435f5b213b3fd4a9530f65012143d1, type: 3}
+--- !u!1 &1348090645
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1348090646}
+  - component: {fileID: 1348090647}
+  m_Layer: 0
+  m_Name: PokemonDatabase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1348090646
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348090645}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.3114743, y: -0.436019, z: 0.025499009}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1348090647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348090645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b310a38cb48cf5b4299db6cb1aa58598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  POKE_API_BASE_URL: https://pokeapi.co/api/v2/pokemon/
 --- !u!1 &1421754572
 GameObject:
   m_ObjectHideFlags: 0
@@ -3452,6 +3521,8 @@ MonoBehaviour:
   typeText: {fileID: 653526017}
   yesText: {fileID: 0}
   noText: {fileID: 0}
+  playerNameText: {fileID: 0}
+  enemyNameText: {fileID: 0}
 --- !u!1 &1808131036
 GameObject:
   m_ObjectHideFlags: 0
@@ -4036,3 +4107,5 @@ SceneRoots:
   - {fileID: 1223029773}
   - {fileID: 795548243}
   - {fileID: 1503937885}
+  - {fileID: 1348090646}
+  - {fileID: 663611609}

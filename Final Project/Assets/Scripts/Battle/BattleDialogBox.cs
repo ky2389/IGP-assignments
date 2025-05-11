@@ -23,6 +23,9 @@ public class BattleDialogBox : MonoBehaviour
     [SerializeField] Text yesText;
     [SerializeField] Text noText;
 
+    [SerializeField] Text playerNameText;
+    [SerializeField] Text enemyNameText;
+
     public void SetDialog(string dialog)
     {
         dialogText.text = dialog;
@@ -94,13 +97,19 @@ public class BattleDialogBox : MonoBehaviour
 
     public void SetMoveNames(List<Move> moves)
     {
-        for (int i=0; i<moveTexts.Count; ++i)
+        for (int i = 0; i < moveTexts.Count; ++i)
         {
             if (i < moves.Count)
                 moveTexts[i].text = moves[i].Base.Name;
             else
                 moveTexts[i].text = "-";
         }
+    }
+
+    public void SetPokemonNames(string playerName, string enemyName)
+    {
+        playerNameText.text = playerName;
+        enemyNameText.text = enemyName;
     }
 
     public void UpdateChoiceBox(bool yesSelected)
