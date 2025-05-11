@@ -13,11 +13,33 @@ public class PokemonParty : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        // Make this object persist between scenes
+        DontDestroyOnLoad(gameObject);
+        
+        // Ensure we don't have multiple instances
+        if (FindObjectsOfType<PokemonParty>().Length > 1)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        // Initialize pokemons list if it's null
+        if (pokemons == null)
+        {
+            pokemons = new List<Pokemon>();
+        }
+    }
+
     private void Start()
     {
         foreach (var pokemon in pokemons)
         {
-            pokemon.Init();
+            if (pokemon != null)
+            {
+                pokemon.Init();
+            }
         }
     }
 
@@ -31,10 +53,11 @@ public class PokemonParty : MonoBehaviour
         if (pokemons.Count < 6)
         {
             pokemons.Add(newPokemon);
+            Debug.Log($"Added Pokemon {newPokemon.Base.Name} to party. Total: {pokemons.Count}");
         }
         else
         {
-            // TODO: Add to the PC once that's implemented
+            Debug.LogWarning("Party is full! Cannot add more Pokemon.");
         }
     }
 }
