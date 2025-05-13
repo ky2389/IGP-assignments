@@ -37,8 +37,8 @@ public class PokemonParty : MonoBehaviour
         foreach (var pokemon in pokemons)
         {
             if (pokemon != null)
-            {
-                pokemon.Init();
+        {
+            pokemon.Init();
             }
         }
     }

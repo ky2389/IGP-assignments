@@ -918,7 +918,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 663611609}
-  - component: {fileID: 663611608}
+  - component: {fileID: 663611610}
   m_Layer: 0
   m_Name: WildPokemonInit
   m_TagString: Untagged
@@ -926,21 +926,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &663611608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 663611607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ced4eb79e2728d146a3e8ba8921eb9e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  possiblePokemonIds: 32000000
-  encounterRates:
-  - 1
 --- !u!4 &663611609
 Transform:
   m_ObjectHideFlags: 0
@@ -956,6 +941,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &663611610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663611607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 282dafe3adb48eb428abd8dd51781622, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possibleEncounters:
+  - pokemonId: 30
+    encounterRate: 0.5
+    minLevel: 10
+    maxLevel: 20
+  - pokemonId: 49
+    encounterRate: 0.5
+    minLevel: 10
+    maxLevel: 20
 --- !u!1 &664902908
 GameObject:
   m_ObjectHideFlags: 0

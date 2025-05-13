@@ -75,7 +75,7 @@ public class BattleSystem : MonoBehaviour
             
             // Setup enemy Pokemon FIRST
             enemyUnit.Setup(wildPokemon);
-            
+
             // Now we can safely access the Pokemon's properties
             yield return dialogBox.TypeDialog($"A wild {enemyUnit.Pokemon.Base.Name} appeared!");
         }
@@ -95,7 +95,7 @@ public class BattleSystem : MonoBehaviour
         playerUnit.Setup(playerParty.Pokemons[0]);
 
         // Setup UI
-        dialogBox.SetMoveNames(playerUnit.Pokemon.Moves);
+            dialogBox.SetMoveNames(playerUnit.Pokemon.Moves);
         dialogBox.SetPokemonNames(playerUnit.Pokemon.Base.Name, enemyUnit.Pokemon.Base.Name);
 
         // Start battle

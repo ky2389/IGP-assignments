@@ -53,14 +53,14 @@ public class GameController : MonoBehaviour
             return;
         }
 
-        var mapArea = FindFirstObjectByType<MapArea>();
-        if (mapArea == null)
+        var wildPokemonSettings = FindFirstObjectByType<WildPokemonSettings>();
+        if (wildPokemonSettings == null)
         {
-            Debug.LogError("No MapArea found in scene!");
+            Debug.LogError("No WildPokemonSettings found in scene!");
             return;
         }
 
-        var wildPokemon = await mapArea.GetComponent<MapArea>().GetRandomWildPokemon();
+        var wildPokemon = await wildPokemonSettings.GetComponent<WildPokemonSettings>().GetRandomWildPokemon();
         if (wildPokemon == null)
         {
             Debug.LogError("Failed to get wild Pokemon!");

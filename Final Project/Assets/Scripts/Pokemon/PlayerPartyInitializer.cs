@@ -3,7 +3,8 @@ using UnityEngine;
 public class PlayerPartyInitializer : MonoBehaviour
 {
     [SerializeField] private PokemonParty playerParty;
-    [SerializeField] private int initialPokemonId = 1; // Default to Bulbasaur
+    private int initialPokemonId = 1; // Default to Bulbasaur
+    [SerializeField] private int initialPokemonLevel = 10;
 
     private void Awake()
     {
@@ -64,7 +65,7 @@ public class PlayerPartyInitializer : MonoBehaviour
         playerParty.Pokemons.Clear();
         
         // Add the custom Pokemon
-        Pokemon pokemon = new Pokemon(customPokemon, 5); // Start at level 5
+        Pokemon pokemon = new Pokemon(customPokemon, initialPokemonLevel); // Start at level
         playerParty.AddPokemon(pokemon);
         Debug.Log($"Added custom Pokemon {pokemon.Base.Name} to party");
     }

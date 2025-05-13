@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5fd68a4b7ad6344ba826f63fe210892, type: 3}
+  m_Name: Cappucino Assasino
+  m_EditorClassIdentifier: 
+  pokemonName: Cappucino Assasino
+  description: 
+  frontSprite: {fileID: 21300000, guid: 72286ef8209a381438d9b9407e6d8a25, type: 3}
+  backSprite: {fileID: 21300000, guid: 3089cd9c37d3f0341b4bf5fce60706fa, type: 3}
+  type1: 5
+  type2: 1
+  maxHp: 50
+  attack: 50
+  defense: 50
+  spAttack: 50
+  spDefense: 50
+  speed: 50
+  expYield: 0
+  growthRate: 0
+  catchRate: 255
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 44adb72fb8ddf6a49b3db2e305367e5c, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 74e46523c01b75c4782a4a9d8ecf8a5b, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: ddd2dc700dbae7d43b7270c01826535a, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 561aa7aac237c444a95bae0075d1f695, type: 2}
+    level: 1
