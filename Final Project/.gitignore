@@ -61,3 +61,21 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+# Custom Pokemon Data
+/[Aa]ssets/Resources/CustomPokemon/
+/[Aa]ssets/Resources/CustomSprites/
+/[Aa]ssets/Resources/CustomMoves/
+
+# API Keys and sensitive data
+*.key
+*.pem
+*apikey*
+*apikey*
+*secret*
+*password*
+*credentials*
+
+# Generated content
+/[Aa]ssets/Resources/Generated/
+/[Aa]ssets/Resources/Temp/
+

@@ -9,7 +9,7 @@ public class PokemonDatabase : MonoBehaviour
 {
     [SerializeField] private string POKE_API_BASE_URL = "https://pokeapi.co/api/v2/pokemon/";
     private const string POKEMON_ASSETS_PATH = "Pokemon";
-    private const int MAX_GEN1_POKEMON_ID = 151; // Maximum ID for Generation 1 Pokemon
+    private const int MAX_GEN1_POKEMON_ID = 999; 
 
     public static PokemonDatabase Instance { get; private set; }
 
